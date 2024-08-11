@@ -1,12 +1,9 @@
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
-        answer = [[1]]
+        triangle = [[1] * (i + 1) for i in range(numRows)]
         
-        for i in range(1, numRows):
-            nextRow = [1] 
-            for j in range(i-1):
-                nextRow.append(answer[i-1][j]+answer[i-1][j+1])
-                
-            nextRow.append(1)
-            answer.append(nextRow)
-        return answer
+        for i in range(2, numRows):
+            for j in range(1, i):
+                triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j]
+        
+        return triangle
