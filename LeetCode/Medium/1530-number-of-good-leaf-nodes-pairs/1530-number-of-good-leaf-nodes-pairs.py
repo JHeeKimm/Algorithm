@@ -23,17 +23,7 @@ class Solution:
                     if l + r <= distance:
                         self.result += 1
                         
-            new_distances = []
-
-            for x in left:
-                if x+1 <= distance:
-                    new_distances.append(x+1)
-     
-            for x in right:
-                if x+1 <= distance:
-                    new_distances.append(x+1)
-                    
-            return new_distances
+            return [x + 1 for x in left + right if x + 1 <= distance]
         
         dfs(root)
         
