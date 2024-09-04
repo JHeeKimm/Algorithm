@@ -8,5 +8,5 @@ if a > b:
     print('>')
 elif a < b:
     print('<')
-else: # else로도 할 수 있겠지만 조건을 명시하기 위해 elif 사용함
+elif a == b: # else로도 할 수 있겠지만 조건을 명시하기 위해 elif 사용함
     print('==')
