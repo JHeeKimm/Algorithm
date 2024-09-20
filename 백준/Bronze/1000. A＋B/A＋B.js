@@ -1,5 +1,2 @@
-var fs = require('fs');
-var input = fs.readFileSync('/dev/stdin').toString().split(' ');
-var a = parseInt(input[0]);
-var b = parseInt(input[1]);
+const [a, b] = require('fs').readFileSync('/dev/stdin').toString().split(' ').map(Number);
 console.log(a+b);
