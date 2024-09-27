@@ -19,10 +19,8 @@ for _ in range(n):
     
     if word == word[::-1]:  # 단어가 회문인 경우
         print(len(word), word[len(word)//2])
-        break
     elif word[::-1] in file:  # 뒤집은 문자열이 이미 존재하는 경우
         print(len(word), word[len(word)//2])
-        break
     else:
         file.append(word)  # 뒤집은 문자열이 존재하지 않으면 파일에 추가
         
