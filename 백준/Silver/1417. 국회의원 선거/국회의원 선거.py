@@ -6,7 +6,7 @@ dasom = int(input()) # 다솜 (기호 1번)을 찍으려는 사람의 수
 
 hq = []
 
-for _ in range(n-1):
+for _ in range(1,n):
     vote = int(input())
     heapq.heappush(hq, -vote) # 최대힙으로 하기 위해 '-' 붙임
 
