@@ -1,16 +1,5 @@
-# 1. 입력
-#   - 첫째 줄: 후보의 수 N
-#   - 둘째 줄 ~ N개의 줄: 기호 n번을 찍으려는 사람의 수
-
-# 2. 출력
-#   - 다솜이가 매수해야 하는 사람의 최솟값 
-
-# 3. 문제 해결
-#   - 다솜이는 기호 1번
-#   - 다솜이 득표수가 가장 많아야겠으니 최대힙
-#   - 매수해야 하는 사람의 최솟값은 카운트로 해준다
-
-import heapq
+import heapq, sys
+input = sys.stdin.readline
 
 n = int(input())
 dasom = int(input()) # 다솜 (기호 1번)을 찍으려는 사람의 수
@@ -19,7 +8,7 @@ hq = []
 
 for _ in range(n-1):
     vote = int(input())
-    heapq.heappush(hq, -vote)
+    heapq.heappush(hq, -vote) # 최대힙으로 하기 위해 '-' 붙임
 
 count = 0
 while hq:
