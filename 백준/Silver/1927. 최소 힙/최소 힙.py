@@ -22,7 +22,7 @@ min_num = [] # 빈 배열로 시작하기?
 x = 0
 
 for _ in range(n):
-    x = int(input())
+    x = int(input().rstrip())
 
     if x != 0:      # 주어진 수가 0이 아니면 힙에 추가
         heapq.heappush(min_num, x)
