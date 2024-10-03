@@ -27,14 +27,14 @@ t = int(input())
 for _ in range(t):
     input()
     n, m = map(int, input().split())
-    sejun = sorted(list(map(int, input().split())))
-    sebi = sorted(list(map(int, input().split())))
+    sejun = sorted(list(map(int, input().split())), reverse=True)
+    sebi = sorted(list(map(int, input().split())), reverse=True)
 
     while sejun and sebi: 
-        if sejun[0] >= sebi[0]:
-            sebi.pop(0)
+        if sejun[-1] >= sebi[-1]:
+            sebi.pop()
         else:
-            sejun.pop(0)
+            sejun.pop()
 
     if sejun:
         print('S')
