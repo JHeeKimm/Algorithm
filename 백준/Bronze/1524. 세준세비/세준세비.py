@@ -30,15 +30,15 @@ for _ in range(t):
     sejun = sorted(list(map(int, input().split())))
     sebi = sorted(list(map(int, input().split())))
 
-    while len(sejun) != 0 and len(sebi) != 0: 
+    while sejun and sebi: 
         if sejun[0] >= sebi[0]:
             sebi.pop(0)
         else:
             sejun.pop(0)
 
-    if len(sebi) == 0:
+    if sejun:
         print('S')
-    elif len(sejun) == 0:
+    elif sebi:
         print('B')
     else: 
         print('C')
