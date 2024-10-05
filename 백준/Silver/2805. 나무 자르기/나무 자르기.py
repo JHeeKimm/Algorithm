@@ -20,7 +20,7 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 tree_h = list(map(int, input().split()))
 
-start = 1 # 나무 최대 높이가 절단기 최소 높이
+start = 1
 end = max(tree_h) # 나무 최대 높이가 절단기 최대 높이
 while start <= end: 
     mid = (start+end)//2 # 가운데 값을 자르는 설정 높이로 둔다
